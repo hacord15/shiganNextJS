@@ -21,7 +21,7 @@ export const IMAGES = {
   "fire.bess": { src: "/images/fire/bess.jpg", alt: "BESS" },
   "fire.generator": { src: "/images/fire/generator.jpg", alt: "Generator" },
   "fire.data-centre": { src: "/images/fire/data-centre.jpg", alt: "Data centre" },
-  "og.default": { src: "/images/og/og.png", alt: "Shigan TechSolutions" },
+  "og.default": { src: "/images/og/og.jpg", alt: "Shigan TechSolutions" },
 } as const satisfies Record<string, ImageAsset>;
 
 export type ImageKey = keyof typeof IMAGES;
