@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #e1061c;
+  --color-brand-d: #b80416;
+  --color-brand-soft: #fdeceb;
+  --color-navy: #0b1432;
+  --color-ink: #1a2238;
+  --color-muted: #5d6579;
+  --color-line: #e6e8ee;
+  --color-leaf: #0f7a3a;
+  --color-leaf-soft: #e6f6ea;
+  --color-forest: #0c3d2a;
+
+  --radius-card: 14px;
+  --shadow-card: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+  --animate-fade: fade 0.25s ease;
+  --animate-pop: pop 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes pop {
+    from { opacity: 0; transform: translateY(16px) scale(0.97); }
+    to { opacity: 1; transform: none; }
+  }
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--font-jakarta), system-ui, sans-serif;
+    color: var(--color-ink);
+    background: #fff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  button { cursor: pointer; }
+  h1, h2, h3, h4, h5, h6 { font-weight: 700; }
+  h1, h2, h3, h4 { color: var(--color-navy); line-height: 1.1; letter-spacing: -0.02em; }
+  body.lock { overflow: hidden; }
+}
+
+/* CSS-only "photo placeholder" art (gradients), shown behind / instead of photos */
+@layer components {
+  .img { border-radius: var(--radius-card); position: relative; overflow: hidden; background: #dfe4ee; }
+  .img > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 3; border-radius: inherit; }
+  .img-truck { background: linear-gradient(180deg,#f4c9a0 0%,#f7e3cd 28%,#cfd8e4 55%,#8d97a6 56%,#6b7483 100%); min-height: 340px; }
+  .img-truck::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 34%; background: linear-gradient(#6c7584,#4a5262); }
+  .img-bldg { background: linear-gradient(180deg,#b9d4f0,#e4eefb 55%,#9aa6b5 56%,#6f7a8b); min-height: 230px; }
+  .img-bldg .b { position: absolute; left: 8%; right: 8%; bottom: 22%; height: 52%; background: linear-gradient(120deg,#fff,#d9dfe9); border-radius: 6px; box-shadow: 0 10px 24px rgba(0,0,0,.15); }
+  .img-bldg .b::before { content: ""; position: absolute; inset: 14% 6% 18%; background: repeating-linear-gradient(90deg,#3a4a66 0 22px,#9fb4d4 22px 28px); border-radius: 4px; opacity: .85; }
+  .img-ext { background: radial-gradient(circle at 70% 30%,#ffb3b3,#d71929 50%,#7a0a14); min-height: 300px; }
+  .ext-row { position: absolute; inset: auto 0 0 0; height: 78%; display: flex; gap: 16px; justify-content: center; align-items: flex-end; padding: 0 24px; }
+  .ext-row i { width: 58px; border-radius: 26px 26px 10px 10px; background: linear-gradient(90deg,#8a0713,#e1061c 40%,#a30a17); height: var(--h,75%); position: relative; box-shadow: 0 8px 16px rgba(0,0,0,.35); }
+  .ext-row i::before { content: ""; position: absolute; top: -14px; left: 16px; width: 26px; height: 16px; background: #222; border-radius: 4px; }
+  .ph-bess { background: linear-gradient(180deg,#cfe1f5,#eaf2fb 50%,#9aa5b1 51%); height: 150px; }
+  .ph-gen { background: linear-gradient(180deg,#d8e8c8,#f2f6ea 50%,#a9b0a2 51%); height: 150px; }
+  .ph-dc { background: linear-gradient(180deg,#1a3a6b,#0a1a3a); height: 150px; }
+  .ph-bess::after, .ph-gen::after, .ph-dc::after { content: ""; position: absolute; inset: 26% 10% 8%; border-radius: 6px; background: repeating-linear-gradient(90deg,rgba(255,255,255,.9) 0 34px,rgba(120,130,150,.5) 34px 38px); }
+  .ph-gen::after { background: linear-gradient(#ffd23c,#e5a900); inset: 30% 14% 10%; }
+  .ph-dc::after { background: repeating-linear-gradient(90deg,#2d5ca8 0 24px,#0d2147 24px 30px); box-shadow: inset 0 0 20px #5aa0ff; }
+  .mini-a { background: linear-gradient(135deg,#1b4c6b,#2f9b8c 60%,#14343f); }
+  .mini-b { background: linear-gradient(135deg,#9e0a16,#e1061c 55%,#5a0710); }
+
+  .hero-media { -webkit-mask-image: linear-gradient(90deg,transparent 0,#000 30%); mask-image: linear-gradient(90deg,transparent 0,#000 30%); }
+  @media (max-width: 900px) { .hero-media { -webkit-mask-image: none; mask-image: none; } }
+
+  .t-card q { quotes: none; }
+  .t-card q::before { content: "❝"; color: var(--color-brand); font-size: 26px; display: block; line-height: 1; margin-bottom: 6px; }
+}
+
+@utility transition-quick { transition: 0.2s; }
