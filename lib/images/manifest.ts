@@ -21,7 +21,26 @@ export const IMAGES = {
   "fire.bess": { src: "/images/fire/bess.jpg", alt: "BESS" },
   "fire.generator": { src: "/images/fire/generator.jpg", alt: "Generator" },
   "fire.data-centre": { src: "/images/fire/data-centre.jpg", alt: "Data centre" },
-  "og.default": { src: "/images/og/og.jpg", alt: "Shigan TechSolutions" },
+
+  // /retrofit-solutions page — drop files in /public/images/retrofit-solutions/
+  "rs.hero": { src: "/images/retrofit-solutions/hero-truck.jpg", alt: "CNG tanker truck" },
+  "rs.engine": { src: "/images/retrofit-solutions/engine.png", alt: "Dual-fuel engine" },
+  "rs.trucks": { src: "/images/retrofit-solutions/trucks.jpg", alt: "Trucks" },
+  "rs.buses": { src: "/images/retrofit-solutions/buses.jpg", alt: "Buses" },
+  "rs.vessels": { src: "/images/retrofit-solutions/vessels.jpg", alt: "Vessels" },
+  "rs.generators": { src: "/images/retrofit-solutions/generators.jpg", alt: "Generators" },
+  "rs.cng": { src: "/images/retrofit-solutions/cng-nozzle.jpg", alt: "CNG refuelling nozzle" },
+
+  // Open Graph / share images (1200×630) — one per page, in /public/images/og/
+  "og.default": { src: "/images/og/og.jpg", alt: "Shigan TechSolutions — Cleaner fuel. Safer energy." },
+  "og.home": { src: "/images/og/og-home.jpg", alt: "Shigan TechSolutions — Cleaner fuel. Safer energy." },
+  "og.retrofit": { src: "/images/og/og-retrofit.jpg", alt: "Retrofitting — Shigan TechSolutions" },
+  "og.retrofit-solutions": { src: "/images/og/og-retrofit-solutions.jpg", alt: "CNG/LNG Retrofit & Dual Fuel Solutions" },
+  "og.fire-safety": { src: "/images/og/og-fire-safety.jpg", alt: "Fire Detection & Suppression" },
+  "og.fire-detection": { src: "/images/og/og-fire-detection.jpg", alt: "Fire protection for high-risk assets" },
+  "og.calculator": { src: "/images/og/og-calculator.jpg", alt: "Savings Calculator" },
+  "og.about": { src: "/images/og/og-about.jpg", alt: "About Shigan TechSolutions" },
+  "og.contact": { src: "/images/og/og-contact.jpg", alt: "Contact Shigan TechSolutions" },
 } as const satisfies Record<string, ImageAsset>;
 
 export type ImageKey = keyof typeof IMAGES;

@@ -7,9 +7,9 @@ export const site = {
   tagline: "TechSolutions",
   title: "Shigan TechSolutions – Cleaner fuel. Safer energy.",
   description: "Advanced retrofitting and fire protection solutions for a cleaner, safer and more sustainable future.",
-  phone: "+91 99999 99999",
-  phoneHref: "tel:+919999999999",
-  email: "info@shigantechsolutions.com",
+  phone: "+91 99583 63647",
+  phoneHref: "tel:+919958363647",
+  email: "contact@shigantechsolutions.com",
   address: "Corporate Office, Gurgaon, Haryana, India",
   legal: "© 2026 Shigan TechSolutions Pvt. Ltd.",
   socials: [
@@ -27,10 +27,10 @@ export type NavItem = { label: string; href: string; children?: NavChild[] };
 /** Main navigation (desktop + mobile). Add a page/link here and it appears in the header. */
 export const nav: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Retrofit", href: "/retrofit", children: ASSET_KEYS.map((k) => ({ label: k, href: `/retrofit?asset=${k}` })) },
+  { label: "Retrofit", href: "/retrofit-solutions", children: ASSET_KEYS.map((k) => ({ label: k, href: `/retrofit?asset=${k}` })) },
   {
     label: "Fire Detection",
-    href: "/fire-safety",
+    href: "/fire-detection",
     children: [
       { label: "BESS", href: "/fire-safety#bess" },
       { label: "Generators", href: "/fire-safety#generators" },

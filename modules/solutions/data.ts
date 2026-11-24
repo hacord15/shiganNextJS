@@ -5,7 +5,7 @@ export type SolutionCard = { icon: IconName; title: string; text: string; href: 
 
 export async function getSolutionCards(): Promise<SolutionCard[]> {
   return [
-    { icon: "wrench", title: "Retrofitting Solutions", text: "CNG/LNG conversion, dual-fuel integration and engine upgrades for existing assets.", href: "/retrofit", image: "solutions.retrofitting", tone: "a" },
-    { icon: "flame", title: "Fire Detection & Suppression", text: "Early detection and advanced suppression systems for BESS, data centres, generators and critical infrastructure.", href: "/fire-safety", image: "solutions.fire", tone: "b" },
+    { icon: "wrench", title: "Retrofitting Solutions", text: "CNG/LNG conversion, dual-fuel integration and engine upgrades for existing assets.", href: "/retrofit-solutions", image: "solutions.retrofitting", tone: "a" },
+    { icon: "flame", title: "Fire Detection & Suppression", text: "Early detection and advanced suppression systems for BESS, data centres, generators and critical infrastructure.", href: "/fire-detection", image: "solutions.fire", tone: "b" },
   ];
 }

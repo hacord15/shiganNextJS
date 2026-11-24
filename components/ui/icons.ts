@@ -4,7 +4,8 @@
  * components. To add an icon: import it here and add one line to `icons`.
  */
 import {
-  ArrowRight, Bell, Bus, Calculator, CalendarDays, ChartColumn, ChevronDown, Clock, Cloud,
+  ArrowRight, Bell, Check, CircleCheck, ChevronRight, ClipboardCheck, ClipboardList, Headset, Minus, Plus,
+  Bus, Calculator, CalendarDays, ChartColumn, ChevronDown, Clock, Cloud,
   Coins, Eye, FileText, Flame, Fuel, Gauge, Leaf, Mail, MapPin, Menu, Monitor, Phone,
   PiggyBank, RotateCcw, Route, Search, ShieldCheck, Ship, Target, Truck, Users, Wrench, X, Zap,
 } from "lucide-react";
@@ -13,6 +14,14 @@ export const icons = {
   arrow: ArrowRight,
   bell: Bell,
   bolt: Zap,
+  check: Check,
+  checkCircle: CircleCheck,
+  chevR: ChevronRight,
+  clipboardCheck: ClipboardCheck,
+  clipboardList: ClipboardList,
+  headset: Headset,
+  minus: Minus,
+  plus: Plus,
   bus: Bus,
   cal: CalendarDays,
   calc: Calculator,
