@@ -6,7 +6,7 @@ export default function Logo({ light = false }: { light?: boolean }) {
   return (
     <AppLink href="/" className={light ? "mb-3.5 flex items-center" : "flex items-center"}>
       <Image
-        src="/images/logo/Shigan-tech.jpg"
+        src="/images/logo/Shigan-tech.jpeg"
         alt={site.name}
         width={227}
         height={67}
